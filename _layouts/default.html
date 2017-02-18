@@ -24,9 +24,9 @@
         <h2>{{ site.description | default: site.github.project_tagline }}</h2>
       </div>
     </header>
-    <div class="pure-menu pure-menu-horizontal">
-      <nav>
-        <ul class="pure-menu-list">
+    <div>
+      <nav class="site-navigation">
+        <ul class="menu">
           {% for nav in site.data.nav %}
             {% if nav.subcategories != null %}
               <li>
@@ -42,8 +42,8 @@
                  <a href="{{ nav.url }}">{{ nav.title }}</a>
                </li>
             {% else %} 
-              <li class="pure-menu-item">
-                <a class="pure-menu-link" href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
+              <li class="menu-item">
+                <a href="{{ site.url }}{{ nav.href }}">{{ nav.title }}</a>
               </li>
             {% endif %}
           {% endfor %}
