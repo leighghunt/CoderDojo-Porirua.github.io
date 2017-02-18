@@ -1,9 +1,12 @@
-- title: "News"
-  href: "/news/"
+- title: "Home"
+  href: "/"
 
-- title: "Snippets"
+- title: "Welcome"
+  href: "/welcome.html"
+
+- title: "About"
   subcategories:
-    - subtitle: "Example1"
+    - subtitle: "About Us"
       subhref: "#"
-    - subtitle: "Example2"
+    - subtitle: "Mentors"
       subhref: "#"
