@@ -6,68 +6,49 @@ header h1 {
   width: 700px;
 }
 
-.site-navigation {
-    display: block;
-    font-family: 'Titillium Web', sans-serif;
-    font-size: 16px;
-    font-weight: bold;
-    margin: 40px;
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
-
-.site-navigation ul {
-  background: #3498DB;
-    list-style: none;
-    margin: 0;
-    padding-left: 0;
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 40px;
+  border-bottom: 1px solid #888;
 }
-
-.site-navigation li {
-    color: #fff;
-  background: #3498DB;
-    display: block;
-    float: left;
-    margin: 0 2px 0 0;
-    padding: 12px;
-    position: relative;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-  
-.site-navigation li a {
-  color: #fff;
+ 
+.nav a {
   text-decoration: none;
+  color: #fff;
   display: block;
+  transition: .3s background-color;
 }
-
-.site-navigation li:hover {
-    @include transition(background, 0.2s);
-    background: #52a6df;
-    cursor: pointer;
+ 
+.nav a:hover {
+  background-color: #005f5f;
 }
-
-.site-navigation ul li ul {
-    background: #52a6df;
-    visibility: hidden;
-    float: left;
-  min-width: 150px;
-    position: absolute;
-  transition: visibility 0.65s ease-in;
-  margin-top:12px;
-    left: 0;
-    z-index: 999;
+ 
+.nav a.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
 }
-
-.site-navigation ul li:hover > ul,
-.site-navigation ul li ul:hover {
-   visibility: visible;
-}
-
-.site-navigation ul li ul li {
-    clear: both;
-    padding: 5px 0 5px 18px;
-  width: 100%;
-}
-
-.site-navigation ul li ul li:hover {
-    background: #74b7e4;
-}
+ 
+@media screen and (min-width: 600px) {
+  .nav li {
+    width: 120px;
+    border-bottom: none;
+    height: 50px;
+    line-height: 50px;
+    font-size: 1.4em;
+  }
+ 
+  /* Option 1 - Display Inline */
+  .nav li {
+    display: inline-block;
+    margin-right: -4px;
+  }
